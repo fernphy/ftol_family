@@ -12,7 +12,7 @@ taxonomy <- ftol_taxonomy %>%
   # Subset to only species in tree
   filter(species %in% phy$tip.label)
 
-# Analyze monophyly of each famiy
+# Analyze monophyly of each family
 family_mono_test <- AssessMonophyly(
   phy,
   as.data.frame(taxonomy[, c("species", "family")])
