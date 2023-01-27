@@ -2,4 +2,4 @@
 
 R code to generate a family level fern tree
 
-License: MIT
+License: [MIT](LICENSE)
