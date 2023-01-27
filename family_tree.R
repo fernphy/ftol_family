@@ -9,13 +9,6 @@ phy <- ft_tree(branch_len = "ultra", rooted = TRUE, drop_og = TRUE)
 
 # Load fern taxonomy
 taxonomy <- ftol_taxonomy %>%
-  # Fix one incorrect family: Dryopolystichum should be in Lomariopsidaceae
-  mutate(
-      family = case_when(
-        genus == "Dryopolystichum" ~ "Lomariopsidaceae",
-        TRUE ~ family
-      )
-    ) %>%
   # Subset to only species in tree
   filter(species %in% phy$tip.label)
 
