@@ -54,4 +54,5 @@ phy_family$tip.label <- new_tips
 plot(ladderize(phy_family))
 
 # Write out tree
-ape::write.tree(phy_family, paste0("ftol_family_tree_v", ft_data_ver(), ".tre"))
+ape::write.tree(
+  phy_family, paste0("output/ftol_family_tree_v", ft_data_ver(), ".tre"))
